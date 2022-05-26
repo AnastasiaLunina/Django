@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <title>Рецепты</title>
 </head>
-<body>
+<body style="background-image: url('https://images.unsplash.com/photo-1505935428862-770b6f24f629?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=867'); background-repeat: no-repeat; background-size: cover">
+<h1 style="margin-left:600px; margin-top: 300px">Вам понадобится:</h1>
 {% for ingredient, amount in recipe.items %}
-    <p>{{ ingredient }}: {{ amount }}</p>
+    <p style="margin-left:600px; font-size: 20px">{{ ingredient }}: {{ amount }}</p>
 {% empty %}
-    <p>Такого рецепта не знаю :(</p>
+    <p style="margin-left:600px; font-size: 20px">Такого рецепта не знаю :(</p>
 {% endfor %}
 </body>
 </html>
