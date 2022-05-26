@@ -13,7 +13,6 @@ def read_csv():
     content = []
     with open(settings.BUS_STATION_CSV, newline='', encoding='utf-8') as file:
         reader = csv.DictReader(file, delimiter=',')
-        # content.extend(reader)
         for row in reader:
             content.append({
                 "Name": row['Name'],
