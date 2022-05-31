@@ -11,9 +11,15 @@ class ProductViewSet(ModelViewSet):
     search_fields = ['title', 'description']
 
 
+class StockSearchFilter(SearchFilter):
+    search_param = 'products'
+
+
 class StockViewSet(ModelViewSet):
     queryset = Stock.objects.all()
     serializer_class = StockSerializer
-    filter_backends = [SearchFilter]
-    SearchFilter.search_param = 'products'
+    filter_backends = [StockSearchFilter]
+    # SearchFilter.search_param = 'products'
     search_fields = ['products__title', 'products__description']
+
+
